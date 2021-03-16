@@ -1,36 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta codigoSecreto="1610779218">
-	<title>Meu site de Pweb</title>
+	<style>
+		body {
+			margin: 0;
+		}
+		ul {
+			list-style-type: none;	
+			margin: 0;
+			padding: 0;
+			width: 20%;
+			background-color:#e9e9e9;
+			position: fixed;
+			height: 100%;
+			overflow: auto;
+		}	
+		li a{
+			display: block;
+			color: #0c0c13;
+			padding: 8px 16px;
+			text-decoration: none;
+			font-size: 20px;
+		}
+		li a.active {
+			background-color: #00008b;
+			color: white;
+		}
+		li a:hover:not(.active) {
+			background-color: rgb(192, 177, 177);
+			color: white;
+		}
+		/*As duas linhas abaixo realça a imagem ao passar o mouse sobre a mesma*/
+		#imagem{position:relative;top:0}
+		#imagem:hover{top:-4px;box-shadow:0 4px 4px #999; transition: all .2s ease-in-out}
+		#div1 {
+			margin-left: 25%; 
+			padding: 1px 16px; 
+			height: 1000px;  
+			width:40%
+		}
+		#div2 {
+			position: absolute; top: 200px;
+			margin-left: 50%;
+			display: inline-block;
+		}
+	</style>
 </head>
 <body>
-	<img src="images/bebendo_água.jpg" alt="Água faz bem" height=200px>
-	<p>Formulário de Pesquisa:</p>
-		<p>Nome: <input type="text" placeholder="Digite seu nome"></p>
-		<p>Senha: <input type="password" placeholder="Digite sua senha"></p>
-		<p>Comida:</p>
-		<p><input type="checkbox" name="comida" value="Coxinha">
-			Coxinha
-		</p>
-		<p><input type="checkbox" name="comida" value="Pastel">
-			Pastel
-		</p>
-	
-		<p>Sexo:</p>
-		<p><input type="radio" name="sexo" value="Masculino">
-			Masculino
-		</p>
-		<p><input type="radio" name="sexo" value="Feminino">
-			Feminino
-		</p>
-
-		<input type="submit" actvalue="Vai!">
-		<input type="reset" value="Limpa">
-	</form>
-
+	<ul>
+		<li><a class="active" href="#inicio">Início</a></li>
+		<hr>
+		<li><a href="#noticias">Canais de Noticias</a></li>
+		<hr>
+		<li><a href="#adicionarPessoas">Adicionar Pessoas</a></li>
+		<li><a href="#listarPessoas">Listar Pessoas</a></li>
+		<hr>
+		<li><a href="#sobreoSite">Sobre o Site</a></li>
+		<li><a href="#madeMeEmail">Mande-me um e-Mail</a></li>
+	</ul>
+	<div id="div1">
+		<h1>Hidrate-se!</h1>
+		<img src="images/bebendo_água.jpg" id="imagem" alt="Água faz bem" title="Água Gelada!" height="500px">
+	</div>
+	<div id="div2">
+		<h3>Evite desperdissar água</h3>
+		<h4>A água faz bem a saúde. Precisamos tomar no mínimo 2 litros desse líquido por dia. Em alguns países, 
+			a escassez é grande e processos automizados precisam  ser estabelecidos para sua aquisição.</h4>
+	</div>
 </body>
 </html>
