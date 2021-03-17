@@ -1,71 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-	<style>
-		body {
-			margin: 0;
-		}
-		ul {
-			list-style-type: none;	
-			margin: 0;
-			padding: 0;
-			width: 20%;
-			background-color:#e9e9e9;
-			position: fixed;
-			height: 100%;
-			overflow: auto;
-		}	
-		li a{
-			display: block;
-			color: #0c0c13;
-			padding: 8px 16px;
-			text-decoration: none;
-			font-size: 20px;
-		}
-		li a.active {
-			background-color: #00008b;
-			color: white;
-		}
-		li a:hover:not(.active) {
-			background-color: rgb(192, 177, 177);
-			color: white;
-		}
-		/*As duas linhas abaixo realça a imagem ao passar o mouse sobre a mesma*/
-		#imagem{position:relative;top:0}
-		#imagem:hover{top:-4px;box-shadow:0 4px 4px #999; transition: all .2s ease-in-out}
-		#div1 {
-			margin-left: 25%; 
-			padding: 1px 16px; 
-			height: 1000px;  
-			width:40%
-		}
-		#div2 {
-			position: absolute; top: 200px;
-			margin-left: 50%;
-			display: inline-block;
-		}
-	</style>
+	<meta charset="UTF-8" />
+	<meta codigoSemana2="1594640456">
+	<link rel="stylesheet" href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/style/style.css">
 </head>
 <body>
-	<ul>
-		<li><a class="active" href="#inicio">Início</a></li>
-		<hr>
-		<li><a href="#noticias">Canais de Noticias</a></li>
-		<hr>
-		<li><a href="#adicionarPessoas">Adicionar Pessoas</a></li>
-		<li><a href="#listarPessoas">Listar Pessoas</a></li>
-		<hr>
-		<li><a href="#sobreoSite">Sobre o Site</a></li>
-		<li><a href="#madeMeEmail">Mande-me um e-Mail</a></li>
-	</ul>
-	<div id="div1">
+	<nav>
+		<ul id="lista_menu">
+			<li><a class="active" href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/index.html">Início</a></li>
+			<hr>
+			<li><a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/noticias.html" target="_self">Canais de Noticias</a></li>
+			<hr>
+			<li><a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/adicionarPessoa.html" target="_self">Adicionar Pessoas</a></li>
+			<li><a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/listarPessoa.html" target="_self">Listar Pessoas</a></li>
+			<hr>
+			<li><a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/sobre.html" target="_self">Sobre o Site</a></li>
+			<li><a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/contato.html" target="_self">Mande-me um e-Mail</a></li>
+		</ul>
+	</nav>
+	<!--<iframe name="iframe1" src="pages/inicio.html"></iframe>-->
+	<div class="div" id="div1">
 		<h1>Hidrate-se!</h1>
-		<img src="images/bebendo_água.jpg" id="imagem" alt="Água faz bem" title="Água Gelada!" height="500px">
+		<img src="C:\GitHub\HitechXXI-pweb_2020.2_joaoPereira\meuSite/images/bebendo_água.jpg" id="imagem" alt="Água faz bem" title="Água Gelada!" height="500px">
 	</div>
-	<div id="div2">
-		<h3>Evite desperdissar água</h3>
-		<h4>A água faz bem a saúde. Precisamos tomar no mínimo 2 litros desse líquido por dia. Em alguns países, 
-			a escassez é grande e processos automizados precisam  ser estabelecidos para sua aquisição.</h4>
+	<div class="div" id="div2">
+		<h3>Evite desperdiçar água</h3>
+		<h4 style="text-align: justify; font-weight: lighter">A água faz bem a saúde. Precisamos tomar no mínimo 2 litros desse líquido por dia. Em alguns países, a escassez é grande e processos automizados precisam  ser estabelecidos para sua aquisição.</h4>
 	</div>
 </body>
 </html>
