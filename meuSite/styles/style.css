@@ -58,3 +58,16 @@ iframe {
         padding: 1px 16px;
         width: 70%;
     }
+button {
+    background:  #00008b;
+}
+table {
+    border-collapse: collapse;
+    width: 90%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+tr:hover {background: #f5f5f5}
