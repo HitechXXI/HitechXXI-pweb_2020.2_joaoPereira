@@ -11,8 +11,8 @@
 	<groupId>com.joaopereira.cadpessoas</groupId>
 	<artifactId>cadpessoas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Cadastro de Pessoas de Pweb 2020.2</name>
-	<description>CRUD de Cadastro de Pessoas de Pweb 2020.2</description>
+	<name>Cadastro de Pessoas de PWeb 2020.2</name>
+	<description>CRUD de Cadastro de Pessoas de PWeb 2020.2</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
