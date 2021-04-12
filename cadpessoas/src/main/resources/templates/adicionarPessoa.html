@@ -25,24 +25,36 @@
 	</nav>
     <div id="div3">
         <h1>Formulário para Cadastro de Pessoas:</h1>
-        <p>Nome Completo *: <input type="text" name="nomeCompleto" placeholder="Digite seu nome"></p>
-        <p>Data de Nascimento *: <input name="dataNascimento" type="date"></p>
-        <p>e-Mail *: <input name="eMail" type="email" placeholder="Digite seu e-Mail"></p>
-        <p>Sexo *:</p>
-        <p><input type="radio" name="sexo" value="Masculino">
-            Masculino
-        </p>
-        <p><input type="radio" name="sexo" value="Feminino">
-            Feminino
-        </p>
-        <p><input type="radio" name="sexo" value="Feminino">
-            Não informar
-        </p>
-        <input type="reset" value="Limpar" style="background-color: #00008B">
-        <a href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/adicionadaComSucesso.html" target="_self">
-            <button>Cadastrar</button>
-        </a>
-        <!--<input href="/GitHub/HitechXXI-pweb_2020.2_joaoPereira/meuSite/pages/adicionadaComSucesso.html" type="submit" value="Cadastrar" style="background-color: #00008B">-->
+        <form 
+        	method="POST" 
+        	th:object="${pessoa}" 
+        	th:action="@{/adicionarPessoa}">
+        	<p>
+        		Nome Completo *: 
+        		<input type="text" name="nomeCompleto" placeholder="Digite seu nome" th:field="*{nomeCompleto}" required/>
+        	</p>
+        	<p>
+        		Data de Nascimento *: 
+        		<input name="dataNascimento" type="date" placeholder="dd/mm/aaaa" th:field="*{dataNascimento}" required/>
+        	</p>
+        	<p>
+        		e-Mail *: 
+        		<input name="eMail" type="email" placeholder="nome@dominio.com" th:field="*{email}" required/>
+        	</p>
+        	<p>Sexo *:</p>
+        	<p>
+        		<input type="radio" name="genero" value="Masculino" required/>Masculino
+        	</p>
+        	<p>
+        		<input type="radio" name="genero" value="Feminino" required/>Feminino
+        	</p>
+        	<p>
+        		<input type="radio" name="genero" value="Feminino" required/>Não informar
+        	</p>	
+        	
+        	<input type="reset" class="button button12Px" value="Limpar" style="background-color: #00008B">
+        	<input type="submit" class="button button12Px" value="Adicionar" style="background-color: #00008B">
+        </form>
         <h6>* Campo obrigatório.</h6>
     </div>
 </body>
