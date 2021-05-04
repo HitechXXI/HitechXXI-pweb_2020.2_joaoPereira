@@ -14,13 +14,13 @@
 		<ul id="lista_menu">
 			<li><a href="/">Início</a></li>
 			<hr>
-			<li><a href="public/noticias.html" target="_self">Canais de Noticias</a></li>
+			<li><a href="/public/noticias.html" target="_self">Canais de Noticias</a></li>
 			<hr>
 			<li><a href="/adicionarPessoa" class="active" target="_self">Adicionar Pessoas</a></li>
 			<li><a href="/listarPessoas" target="_self">Listar Pessoas</a></li>
 			<hr>
-			<li><a href="public/sobre.html" target="_self">Sobre o Site</a></li>
-			<li><a href="public/contato.html" target="_self">Mande-me um e-Mail</a></li>
+			<li><a href="/public/sobre.html" target="_self">Sobre o Site</a></li>
+			<li><a href="/public/contato.html" target="_self">Mande-me um e-Mail</a></li>
 		</ul>
 	</nav>
     <div id="div3">
@@ -31,7 +31,7 @@
         	th:action="@{/adicionarPessoa}">
         	<p>
         		Nome Completo *: 
-        		<input type="text" name="nomeCompleto" placeholder="Digite seu nome" th:field="*{nomeCompleto}" required/>
+        		<input type="text" name="nome" placeholder="Digite seu nome" th:field="*{nome}" required/>
         	</p>
         	<p>
         		Data de Nascimento *: 
