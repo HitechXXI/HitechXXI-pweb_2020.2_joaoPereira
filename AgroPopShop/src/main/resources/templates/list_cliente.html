@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Gerenciar Cliente</title>
+</head>
+<body>
+	<div align="center">
+		<h1>Gerenciar Cliente</h1>
+		<a href="newCliente">Criar Novo Cliente</a>
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Cliente ID</th>
+					<th>Nome</th>
+					<th>Endereço</th>
+					<th>CEP</th>
+					<th>E-Mail</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cliente : ${listClientes}">
+					<td th:text="${cliente.id}">Cliente ID</td>
+					<td th:text="${cliente.nome}">Nome</td>
+					<td th:text="${cliente.endereco}">Endereço</td>
+					<td th:text="${cliente.cep}">CEP</td>
+					<td th:text="${cliente.email}">E-Mail</td>
+					<td>
+						<a th:href="@{'/editCliente/' + ${cliente.id}}">Edit</a>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<a th:href="@{'/deleteCliente/' + ${cliente.id}}">Delete</a>
+					</td>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
