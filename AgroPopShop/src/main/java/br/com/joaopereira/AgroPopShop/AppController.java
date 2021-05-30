@@ -65,6 +65,52 @@ public class AppController {
 		return "redirect:/listCliente";
 	}
 	
+	/* --------- CONTROLLER DEPENDENTE --------- */
+	
+	@Autowired
+	private DependenteService serviceDependente;
+	
+	@RequestMapping("/listDependente")
+	public String viewDependente(Model model) {
+		List<Dependente> listDependentes = serviceDependente.listAll();
+		model.addAttribute("listDependentes", listDependentes);
+		
+		return "list_dependente";
+	}
+	
+	@RequestMapping("/newDependente")
+	public String showNewDependenteForm(Model model) {
+		Dependente dependente = new Dependente();
+		model.addAttribute("dependente", dependente);
+		
+		return "new_dependente";
+	}
+	
+	@RequestMapping(value = "/saveDependente", method = RequestMethod.POST)
+	public String saveDependente(@ModelAttribute("dependente") Dependente dependente) {
+		serviceDependente.save(dependente);
+		
+		return "redirect:/listDependente";
+		
+	}
+	
+	@RequestMapping("/editDependente/{id}")
+	public ModelAndView showEditDependenteForm(@PathVariable(name = "id") Long id) {
+		ModelAndView mav = new ModelAndView("edit_dependente");
+		
+		Dependente dependente = serviceDependente.get(id);
+		mav.addObject("dependente", dependente);
+		
+		return mav;
+	}
+	
+	@RequestMapping("/deleteDependente/{id}")
+	public String deleteDependente(@PathVariable(name = "id") Long id) {
+		serviceDependente.delete(id);
+		
+		return "redirect:/listDependente";
+	}
+	
 	/* --------- CONTROLLER PRODUCT --------- */
 	
 	@Autowired

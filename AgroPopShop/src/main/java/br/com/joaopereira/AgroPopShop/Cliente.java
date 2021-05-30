@@ -9,10 +9,13 @@ import javax.persistence.Id;
 public class Cliente {
 	private Long id;
 	private String nome;
+	// https://www.youtube.com/watch?v=edXQiFAdH2c&t=1s (CRIA UMA CLASSE ENDEREÇO)
 	private String endereco;
 	private String cep;
 	private String email;
-	
+	private String genero;
+	private String rg;
+
 	protected Cliente() {
 	}
 	
@@ -55,6 +58,22 @@ public class Cliente {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}	
-	
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public String getRg() {
+		return rg;
+	}
+
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
 }

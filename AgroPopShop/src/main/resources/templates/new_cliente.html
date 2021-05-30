@@ -11,8 +11,18 @@
 		<form action="#" th:action="@{/saveCliente}" th:object="${cliente}" method="post">
 			<table>
 				<tr>
-					<td>Nome Completo:</td>
+					<td>Nome do Cliente:</td>
 					<td><input type="text" th:field="*{nome}" /></td>
+				</tr>
+				<tr>
+					<td>Gênero:</td>
+					<td><input type="radio" th:field="*{genero}" value="Masculino"/>Masculino</td>
+					<td><input type="radio" th:field="*{genero}" value="Feminino"/>Feminino</td>
+					<td><input type="radio" th:field="*{genero}" value="Não Informar"/>Não Informar</td>
+				</tr>
+				<tr>
+					<td>RG:</td>
+					<td><input type="text" th:field="*{rg}" /></td>
 				</tr>
 				<tr>
 					<td>Endereço:</td>

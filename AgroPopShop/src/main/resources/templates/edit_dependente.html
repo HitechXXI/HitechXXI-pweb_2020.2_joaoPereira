@@ -2,43 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Editar Cliente</title>
+	<title>Editar Dependente</title>
 </head>
 <body>
 	<div align="center">
-		<h1>Editar Cliente</h1>
+		<h1>Editar Dependente</h1>
 		<br/>
-		<form action="#" th:action="@{/saveCliente}" th:object="${cliente}" method="post">
+		<form action="#" th:action="@{/saveDependente}" th:object="${dependente}" method="post">
 			<table>
 				<tr>
 					<td>Cliente ID:</td>
+					<td><input type="text" th:field="*{idcliente}" readonly="readonly" /></td>
+				</tr>
+				<tr>
+					<td>Dependente ID:</td>
 					<td><input type="text" th:field="*{id}" readonly="readonly" /></td>
 				</tr>
 				<tr>
-					<td>Nome do Cliente:</td>
+					<td>Nome do Dependente:</td>
 					<td><input type="text" th:field="*{nome}" /></td>
+				</tr>
+				<tr>
+					<td>Data de Nascimento:</td>
+					<td><input type="text" th:field="*{data_nascimento}" /></td>
 				</tr>
 				<tr>
 					<td>Gênero:</td>
 					<td><input type="radio" th:field="*{genero}" value="Masculino"/>Masculino</td>
 					<td><input type="radio" th:field="*{genero}" value="Feminino"/>Feminino</td>
 					<td><input type="radio" th:field="*{genero}" value="Não Informar"/>Não Informar</td>
-				</tr>
-				<tr>
-					<td>Endereço:</td>
-					<td><input type="text" th:field="*{endereco}" /></td>
-				</tr>
-				<tr>
-					<td>RG:</td>
-					<td><input type="text" th:field="*{rg}" /></td>
-				</tr>
-				<tr>
-					<td>CEP:</td>
-					<td><input type="text" th:field="*{cep}" /></td>
-				</tr>
-				<tr>
-					<td>E-Mail:</td>
-					<td><input type="text" th:field="*{email}" /></td>
 				</tr>
 				<tr>
 					<td colspan="2"><button type="submit">Save</button></td>
